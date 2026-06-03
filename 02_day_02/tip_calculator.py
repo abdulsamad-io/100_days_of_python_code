@@ -2,7 +2,7 @@
 
 no_of_people = int(input("How many people will share the bill: "))
 
-net_bill = int(input("How much does the food cost total: EUR"))
+net_bill = float(input("How much does the food cost total: EUR"))
 
 tip_percentage = int(input("How many percent (%) tip are you willing to give: "))
 
