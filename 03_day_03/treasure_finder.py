@@ -1,0 +1,36 @@
+# print('''
+#                  .________________._____
+#                /~~~~~~~//~~~~~~~~//~~~~~|
+#               /       //        //      |
+#    O       [%%%%%%%%%] O=====] |[_______]
+#   __\__ ===========___/_ --------}==========================
+#  |**   |/|(@ ## (@|   **|        |     []|                  |)
+#  |     |/| ###### |     | _____  |       |         ___      |
+#  |_____|/|_######_|____ |/_  _  \}_______|________/_  _\    |.
+# |________________________|     \ \_______________//     \\ /
+#   |%{  @  }            |%{  @  }                |%{  @  }
+#    \%\   /              \%\   /                  \%\   /
+#      ~~~~                 ~~~~                     ~~~~
+# ''')
+
+print ("welcome to treasure hunt game show. your mission is to find the treasure!")
+
+ans_1 = input(print("which way do you want to go. Type left or right")).lower()
+
+if ans_1 == "left":
+    ans_2 = input(print("Correct,on to the next move you have hit a river, want to go next?. swim oe wait? ")).lower()
+    if ans_2 == "wait":
+        print("Nice move, you escaped the shark!."
+               "You now have three doors to open just one. Red, Yellow or Blue ")
+        ans_3 = input(print("which door are you opening")).lower()
+        if ans_3 == "red":
+            print ("Wrong door. GAME OVER!")
+        elif ans_3 == "blue":
+            print("Wrong door. GAME OVER!")
+        else:
+            print("YOU WIN!")
+    else:
+        print("Swimming with the sharks. GAME OVER!")
+else:
+    print ("you fell int the ditch, GAME OVER!")
+
