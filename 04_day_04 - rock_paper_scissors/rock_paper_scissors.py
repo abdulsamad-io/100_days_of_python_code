@@ -90,5 +90,3 @@ else:
       |_|                             
     ''')
 
-print ('play another game!!!')
-
