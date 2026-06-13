@@ -21,13 +21,13 @@ letters_rand = []
 numbers_rand = []
 symbols_rand = []
 
-for i in range (1,nr_letters+1):
+for i in range (0,nr_letters):
     my_letter = random.choice(letters)
     letters_rand.append(my_letter)
-for j in range (1,nr_symbols+1):
+for j in range (0,nr_symbols):
     my_symbol = random.choice(symbols)
     symbols_rand.append(my_symbol)
-for k in range (1,nr_numbers+1):
+for k in range (0,nr_numbers):
     my_number = random.choice(numbers)
     numbers_rand.append(my_number)
 
@@ -35,7 +35,14 @@ password_list = letters_rand + numbers_rand + symbols_rand
 
 print (password_list)
 
+random.shuffle(password_list)
+
+print (password_list)
+
+password_string = ("".join(password_list))
+
 print (f'your password is {"".join(password_list)}')
+
 
 
 
