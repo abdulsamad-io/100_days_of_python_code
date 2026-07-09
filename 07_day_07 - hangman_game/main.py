@@ -99,6 +99,9 @@ while not game_over:
                 word_blank += letter
             else:
                 word_blank += '-'
+        if '-' not in word_blank:
+            game_over = True
+            print ('You win')
         print(word_blank)
     print(stages[lives])
 
