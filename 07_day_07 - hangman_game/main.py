@@ -26,7 +26,7 @@ word_blank_list = []
 
 hang_position = hangman_stages.stages [6]
 while not game_over:
-    user_guess = input('enter a guess word: \n')
+    user_guess = input('enter a guess word: \n').lower()
     word_blank = ''
     display = ""
     if user_guess not in word:
@@ -36,6 +36,7 @@ while not game_over:
         if lives == 0:
             game_over = True
             print ('You lose')
+            print ('The right word was : ', word)
     else:
         if user_guess in word:
             print('Guess is CORRECT!')
