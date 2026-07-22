@@ -39,14 +39,14 @@ if opr in opr_list:
                 print (f'{current_num} {current_opr} {b} = {our_calc}')
                 current_num = our_calc
                 #print (current_num)
-                continue_check = input("***> Do you wan to continue? (y/n): ")
+                continue_check = input("***> Do you want to continue? (y/n): ")
                 if continue_check == "n":
                     calc_ongoing = False
                     print ("***> Thank you for using this program.")
                     print(calculator_arts.calc_exit)
                 else:
-                    print(calculator_arts.calc_logo)
-                    print (f'***> Your fist number is now  {current_num}')
+                    print(calculator_arts.wave)
+                    print (f'***> Your first number is now  {current_num}')
                     next_opr = input("***> Enter the operation: + , - , * or /  : ")
                     current_opr = next_opr
 else:
