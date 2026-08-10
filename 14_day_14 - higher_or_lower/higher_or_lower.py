@@ -9,20 +9,49 @@ players = {
 }
 
 char_1 = random.choice(list(players.items()))
-print(f'char_1 is {char_1}')
-print(f'to remove {char_1[0]}')
-#print(players)
+players.pop(char_1[0])
 
-players.pop(char_1[0])  # removes the key in-place, don't reassign players to the result
-#print(players)
+char_2 = ()
+higher = ()
 
-char_2 = random.choice(list(players.items()))
-print(f'char_2 is {char_2}')
+def play_game():
+    global char_2
+    global higher
+    char_2 = random.choice(list(players.items()))
+    players.pop(char_2[0])
+    def compare_char(character_1, character_2):
+        if character_1[1] > character_2[1]:
+            return character_1
+        else:
+            return character_2
+    higher = compare_char(char_1, char_2)
 
-a = 0
-b = 0
+def compare_player_answer(answer):
+    global game_not_over
+    global char_1
+    chosen = char_1 if answer == "a" else char_2
+    if chosen[0] == higher[0]:
+        char_1 = higher
+        return "Correct"
+    else:
+        game_not_over = False
+        return "Wrong"
 
-def compare_char (character_1 , character_2):
-    global a,b
-    character_1[1] = a
-    character_1[1] = b
+play_game()
+game_not_over = True
+score = 0
+
+while game_not_over:
+    user_choice = input(f'Type a for {char_1[0]} or b for {char_2[0]}: ')
+    result = compare_player_answer(user_choice)
+    print(result)
+
+    if result == "Correct":
+        score += 1
+        if not players:
+            print(f"You've guessed every player! Final score: {score}")
+            game_not_over = False
+        else:
+            play_game()  # only set up the next round if players are left
+    else:
+        print(f"Game over! Final score: {score}")
