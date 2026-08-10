@@ -27,3 +27,14 @@ in the data center...
 """
 
 # --- write your code below this line ---
+
+
+def user_story (noun, verb, adjective, place):
+    return f'In the beginning, the {noun} {verb}ed a {adjective} food in his {place} kitchen'
+
+user_noun = input('Give me a noun: ')
+user_verb = input('Give me a verb: ')
+user_adjective = input('Give me a adjective: ')
+user_place = input('Give me a place: ')
+
+print(user_story(user_noun, user_verb, user_adjective, user_place))
