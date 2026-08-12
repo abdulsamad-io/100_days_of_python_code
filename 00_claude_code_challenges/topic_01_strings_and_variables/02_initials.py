@@ -35,3 +35,18 @@ you have done it properly.
 """
 
 # --- write your code below this line ---
+
+user_names = []
+
+enter_name = True
+
+while enter_name:
+    user_name = input('Give me your name(s): ').lower()
+    if user_name != "":
+        user_names.append(user_name)
+    else:
+        print('Please enter a valid name.')
+    continue_user_input = input('Do you want to continue with another name? (y/n): ').lower()
+    if continue_user_input == 'n':
+        enter_name = False
+print(user_names)

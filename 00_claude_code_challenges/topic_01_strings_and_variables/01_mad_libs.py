@@ -29,11 +29,12 @@ in the data center...
 # --- write your code below this line ---
 
 
-def user_story (noun, verb, adjective, place):
-    return f'In the beginning, the {noun} {verb}ed a {adjective} food in his {place} kitchen'
+def user_story(noun, verb, adjective, place):
+    """This functions returns a randomly made up story"""
+    return f'In the beginning, the {noun} {verb} a {adjective} food in his {place} kitchen'
 
 user_noun = input('Give me a noun: ')
-user_verb = input('Give me a verb: ')
+user_verb = input('Give me a verb in past tense: ')
 user_adjective = input('Give me a adjective: ')
 user_place = input('Give me a place: ')
 
