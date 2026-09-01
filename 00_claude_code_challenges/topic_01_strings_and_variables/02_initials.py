@@ -33,14 +33,7 @@ Try the input "  abdul   samad  " (extra spaces everywhere).
 If your code survives without crashing or printing weird dots,
 you have done it properly.
 """
-
-# --- write your code below this line ---
-# characters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm',
-#               'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', '-']
-
 user_names = []
-
-# enter_name = True
 
 initials = ""
 
@@ -52,28 +45,3 @@ for name in name_split:
     initials += name[0].upper() + "."
 
 print (f'Your initials: {initials}')
-
-
-
-
-# while enter_name:
-#     user_name = input('Give me your name, one at a time: ').lower()
-
-#     error_chars = []
-#     for char in user_name:
-#         if char not in characters:
-#             error_chars.append(char)
-
-#     if error_chars:
-#         print(f'The following characters are invalid, please try again: {error_chars}')
-#     else:
-#         user_names.append(user_name)
-
-#     continue_user_input = input('Do you want to continue with another name? (y/n): ').lower()
-#     if continue_user_input == 'n':
-#         enter_name = False
-
-# print(user_names)
-
-# initials = [name.split()[0][0].upper() for name in user_names]
-
