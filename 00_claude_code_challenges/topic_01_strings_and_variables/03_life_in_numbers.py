@@ -22,3 +22,12 @@ You have lived for:
 """
 
 # --- write your code below this line ---
+
+
+user_age = int(input('What is your current age? '))
+
+days_lived = user_age * 365
+hours_lived = days_lived * 24
+minutes_lived = hours_lived * 60
+
+print(f'You have lived for:\n  {days_lived} days\n  {hours_lived} hours\n  {minutes_lived} minutes')
