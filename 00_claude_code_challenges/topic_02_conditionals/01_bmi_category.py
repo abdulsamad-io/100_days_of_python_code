@@ -38,14 +38,14 @@ Your BMI is 25.2 - you are overweight.
 # --- write your code below this line ---
 
 def bmi_category(bmi):
-      if bmi < 18.5:
-         return "underweight"
-      elif 18.5 <= bmi < 25:
-         return "normal weight"
-      elif 25 <= bmi < 30:
-         return "overweight"
-      else:
-         return "obese"
+   if bmi < 18.5:
+      return "underweight"
+   elif 18.5 <= bmi < 25:
+      return "normal weight"
+   elif 25 <= bmi < 30:
+      return "overweight"
+   else:
+      return "obese"
 
 weight = float(input("Your weight in kg: "))
 height = float(input("Your height in m: "))
