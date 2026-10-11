@@ -31,3 +31,11 @@ HINTS
 """
 
 # --- write your code below this line ---
+
+name = input("Enter your name: ")
+if len(name) < 3:
+    print("Sorry, your name must be at least 3 characters long.")
+else:
+    birth_year = input("Enter your birth year: ")
+    username = name[:3].lower() + birth_year
+    print(f"Your username is: {username}")
