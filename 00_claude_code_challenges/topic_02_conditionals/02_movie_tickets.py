@@ -37,3 +37,25 @@ RULES
 """
 
 # --- write your code below this line ---
+
+def ticket_price(age):
+    """Returns the ticket price based on age and student status."""
+    if age < 12:
+        return 8.00
+    elif 12 <= age < 18:
+        return 10.00
+    elif 18 <= age < 65:
+        student = input("Are you a student? (y/n): ")
+        if student.lower() == 'y':
+            return 14.00 * 0.8  # Apply 20% discount for students
+        else:
+            return 14.00
+    else:  # age >= 65
+        return 9.00
+
+# get variables
+age = int(input("How old are you? "))
+price = ticket_price(age)
+
+#print ticket price with 2 decimal places
+print(f"Your ticket costs EUR {price:.2f}")
