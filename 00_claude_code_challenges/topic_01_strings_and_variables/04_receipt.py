@@ -33,9 +33,8 @@ per-person share works out to exactly 33.1? Would this fix help?
 
 # --- write your code below this line ---
 
-"""
-.2f in an f-string means to format the number as a floating-point number with 2 digits after the decimal point.
-"""
+#.2f in an f-string means to format the number as a floating-point number with 2 digits after the decimal point.
+
 # Ask item details from the user
 item_name = input("Item name: ")
 price_per_item = float(input("Price per item: "))
@@ -45,4 +44,4 @@ quantity = int(input("Quantity: "))
 total_price = price_per_item * quantity
 
 # Print the receipt with formatted total price
-print (f'---------- \nItem name: {item_name}\nPrice per item: {price_per_item}\nQuantity: {quantity}\nTotal price: {total_price:.2f}')
+print (f'---------- \nItem name: {item_name}\nPrice per item: {price_per_item:.2f}\nQuantity: {quantity}\nTotal price: {total_price:.2f}')
