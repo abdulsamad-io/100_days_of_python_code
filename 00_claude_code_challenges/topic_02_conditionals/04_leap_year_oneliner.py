@@ -30,3 +30,20 @@ RULES
 """
 
 # --- write your code below this line ---
+
+def is_leap_year(year):
+    """Returns True if the given year is a leap year, False otherwise."""
+    return year % 4 == 0 and year % 100 != 0 or year % 400 == 0
+
+years_to_test = input("Enter years to test: ")
+
+print(is_leap_year(int(years_to_test)))
+
+""""
+Then answer in a comment, in your own words:
+    1. Why does "year % 4 == 0 and year % 100 != 0 or year % 400 == 0"
+       work without any parentheses? (Which binds tighter, and or or?) - this works because the 'and' operator has a higher precedence than the 'or' operator. This means that the expression "year % 4 == 0 and year % 100 != 0" is evaluated first, and then the result is combined with "year % 400 == 0" using the 'or' operator.
+    2. Would it still be correct with parentheses placed like this:
+       "year % 4 == 0 and (year % 100 != 0 or year % 400 == 0)"? - Yes, it would still be correct with the parentheses placed like that. The parentheses explicitly group the conditions for the 'or' operator, but since 'and' has higher precedence, the logic remains the same. Testing both versions with the years 1900, 2000, 2024, and 2025 confirms that they yield the same results: 1900 -> False, 2000 -> True, 2024 -> True, 2025 -> False.
+       Test both with 1900, 2000, 2024, 2025 before you answer!
+"""
