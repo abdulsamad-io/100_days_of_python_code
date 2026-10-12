@@ -46,13 +46,13 @@ b = float(input("Side b: "))
 c = float(input("Side c: "))
 
 def triangle_type(a, b, c):
-      """Classifies the triangle based on side lengths."""
-      if a == b == c:
-         return "This is a valid equilateral triangle."
-      elif a == b or b == c or a == c:
-         return "This is a valid isosceles triangle."
-      else:
-         return "This is a valid scalene triangle."
+   """Classifies the triangle based on side lengths."""
+   if a == b == c:
+      return "This is a valid equilateral triangle."
+   elif a == b or b == c or a == c:
+      return "This is a valid isosceles triangle."
+   else:
+      return "This is a valid scalene triangle."
 
 # check if the sides can form a triangle
 # The triangle inequality theorem states that the sum of the lengths of any two sides must be greater than the length of the remaining side.
